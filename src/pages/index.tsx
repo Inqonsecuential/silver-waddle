@@ -74,6 +74,11 @@ const PasswordGenerator = () => {
     }, 1500); // Hide the tooltip after 1.5 seconds
   };
 
+  const handleClearLocalStorage = () => {
+    localStorage.removeItem('generatedPasswords');
+    setGeneratedPasswords([]);
+  };
+
   return (
     <div className='min-h-screen flex items-center justify-center bg-indigo-50'>
       <div className='bg-white p-6 rounded shadow-md'>
@@ -190,6 +195,16 @@ const PasswordGenerator = () => {
             </button>
           )}
         </div>
+        {generatedPasswords.length > 0 && (
+          <div className='mt-6'>
+            <button
+              onClick={handleClearLocalStorage}
+              className='px-3 py-1 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring focus:bg-red-700 font-poppins'
+            >
+              Clear Passwords
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
