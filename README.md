@@ -25,7 +25,7 @@ To run the app locally on your machine, follow these steps:
 2. **Install Dependencies**: Navigate into the project directory and install the required dependencies.
 
    ```bash
-   cd password-generator-app
+   cd silver-waddle
    npm install
    ```
 
